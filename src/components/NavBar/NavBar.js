@@ -1,5 +1,6 @@
-import logo from '../logo.svg';
-const NavBar = () => {
+import './NavBar.css';
+import logo from '../../logo.svg';
+const NavBar = (props) => {
     return ( 
         <div className="NavBarAbuelo">
         <div className="NavBarPadre">
@@ -9,6 +10,7 @@ const NavBar = () => {
                 <li><a href='../../public/index.html'>Tienda</a></li>
                 <li><a href='../../public/index.html'>Nosotros</a></li>
                 <li><a href='../../public/index.html'>Contacto</a></li>
+                <li> {props.children} </li>
             </ul>
         </div>
     </div>

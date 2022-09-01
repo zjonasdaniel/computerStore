@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import CartWidget from './components/CartWidget/CartWidget';
+import ItemListConteiner from './components/Saludo/ItemListConteiner';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar>
+        <CartWidget/>
+      </NavBar>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+        <ItemListConteiner greeting='Hola, Bienveni@s!'/>
       </header>
     </div>
   );
