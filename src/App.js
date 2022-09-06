@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import CartWidget from './components/CartWidget/CartWidget';
-import ItemListConteiner from './components/Saludo/ItemListConteiner';
+import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
+import { ItemCount } from './components/ItemCount/ItemCount';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           Learn React
         </a>
         <ItemListConteiner greeting='Hola, Bienveni@s!'/>
+        <ItemCount/>
       </header>
     </div>
   );
