@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import CartWidget from './components/CartWidget/CartWidget';
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
 import { ItemCount } from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </a>
         <ItemListConteiner greeting='Hola, Bienveni@s!'/>
         <ItemCount/>
+        <ItemDetailContainer/>
       </header>
     </div>
   );
