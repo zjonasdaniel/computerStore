@@ -1,9 +1,11 @@
-import data from "../mockData";
+import data from "../../components/mockData";
 import { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
-
+import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
+    const parametros = useParams();
+    
     const [Item, setItem] = useState([]);
 
     useEffect(() => {
@@ -15,12 +17,12 @@ const ItemDetailContainer = () => {
 
     const getItem = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data.find((item)=>item.id==="1"));
-        }, 2000);
+            resolve(data.find((item)=>item.id===parametros.id));
+        },);
     });
 
     return (
-        <div>
+        <div className="ItemListPadre">
             <ItemDetail Item={Item} />
         </div>
     )

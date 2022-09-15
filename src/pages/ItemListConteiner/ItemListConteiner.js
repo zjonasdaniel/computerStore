@@ -1,6 +1,6 @@
-import data from "../mockData";
+import data from "../../components/mockData";
 import { useEffect, useState } from "react";
-import { ItemList } from "../ItemList/ItemList";
+import { ItemList } from "../../components/ItemList/ItemList";
 
 const ItemListConteiner = ({ greeting }) => {
   const [productList, setProductList] = useState([]);
@@ -15,14 +15,14 @@ const ItemListConteiner = ({ greeting }) => {
   const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(data);
-    }, 2000);
+    }, 500);
   });
 
   return (
-    <>
+    <div className="divPadreItemListConteiner">
       <h1> {greeting} </h1>
       <ItemList lista={productList}/>
-    </>
+    </div>
   )
 }
 

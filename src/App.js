@@ -1,34 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import CartWidget from './components/CartWidget/CartWidget';
-import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
-import { ItemCount } from './components/ItemCount/ItemCount';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemListConteiner from './pages/ItemListConteiner/ItemListConteiner';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
   return (
     <div className="App">
-      <NavBar>
-        <CartWidget/>
-      </NavBar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ItemListConteiner greeting='Hola, Bienveni@s!'/>
-        <ItemCount/>
-        <ItemDetailContainer/>
-      </header>
+      <BrowserRouter>
+        <NavBar>
+          <CartWidget />
+        </NavBar>
+        <Routes>
+          <Route path='/' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+          <Route path='/inicio' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+          <Route path='/tienda' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+          <Route path='/nosotros' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+          <Route path='/contacto' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+          <Route path='/detail/:id' element={<ItemDetailContainer/>} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
