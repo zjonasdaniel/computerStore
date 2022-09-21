@@ -1,0 +1,12 @@
+.itemCountPadre{
+    background-color: #61dafb7c;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    color: black;
+}
+.itemCountCount{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
