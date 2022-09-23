@@ -1,22 +1,21 @@
-import { useState } from "react";
 import "./ItemCount.css";
-export const ItemCount = () => {
-    const [count1, setcount1] = useState(0);
+
+export const ItemCount = ({count,setCount,stock}) => {
     const suma = () => {
-        if (count1 < 10) { setcount1(count1 + 1) }
+        if (count < stock) { setCount(count + 1) }
     }
     const resta = () => {
-        if (count1 > 0) { setcount1(count1 - 1) }
+        if (count > 1) { setCount(count - 1) }
     }
     return (
         <div className="itemCountPadre">
-            <div className="itemCountStock"> Stock Disponible: 10unidades</div>
+            <div className="itemCountStock"> Stock Disponible: {stock} unidades</div>
             <div className="itemCountCount">
                 <button onClick={resta}>
                     -
                 </button>
                 <div>
-                    {count1}
+                    {count}
                 </div>
                 <button onClick={suma}>
                     +
