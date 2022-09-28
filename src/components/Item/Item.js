@@ -6,7 +6,7 @@ export const Item = ({ id, title, price, image }) => {
             <div className="ItemHijo">
                 <img width={"200px"} src={image} alt={title} />
                 <h2>{title}</h2>
-                <h3>{price}</h3>
+                <h3>${price}</h3>
                 <Link to={'/detail/'+ id} className='ItemButton'> Detalles </Link> 
             </div>
         </div>

@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     const parametros = useParams();
     
     const [Item, setItem] = useState([]);
-
+    
     useEffect(() => {
         getItem.then((response) => {
             setItem(response);
