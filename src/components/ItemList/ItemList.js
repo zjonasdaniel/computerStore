@@ -4,11 +4,11 @@ export const ItemList = ({ lista }) => {
     <div className="ItemListPadre">
       {lista.map((product) => (
         <Item
-          key={product.id}
-          title={product.title}
-          price={product.price}
-          image={product.image}
-          id={product.id}
+          key={product.Id}
+          title={product.Title}
+          price={product.Price}
+          image={product.Image}
+          id={product.Id}
         />
       ))}
     </div>
