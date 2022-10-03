@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import './ItemDetailContainer.css'
+import { Link } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-  const {Id}  = useParams();
+  const { Id } = useParams();
   const [Item, setItem] = useState([]);
   const db = getFirestore();
-  
+
   useEffect(() => {
     getItem();
   }, [Id]);
@@ -20,7 +22,15 @@ const ItemDetailContainer = () => {
   };
 
   return (
-    <div className="ItemListPadre">
+    <div className="ItemDetailContainer">
+      <div className="ItemDetailContainerDiv1">
+        <Link className="ItemDetailLink" to={'/inicio'}>
+          <div className="ItemDetailContainerDiv1Button">Volver</div>
+        </Link>
+        <Link className="ItemDetailLink" to="/cart">
+          <div className="ItemDetailContainerDiv1Button">Carrito</div>
+        </Link>
+      </div>
       <ItemDetail Item={Item} />
     </div>
   );

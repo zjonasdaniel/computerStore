@@ -6,6 +6,7 @@
 }
 .CartDiv2 {
   width: 80%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,11 +48,11 @@
 }
 .CartDiv3_2{
     border: solid 1px black;
-    margin: 5px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 95%;
     background-color: white;
     border-radius: 10px;
 }
@@ -70,4 +71,36 @@
 .CartDiv3_2_1Details{
     display: flex;
     justify-content: space-evenly;
+}
+.CartDiv4{
+  height: 80%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+.CartDiv4-1{
+  height: 40%;
+  width: 80%;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+.CartDiv4-1-1{
+  display: flex;
+  justify-content: center;
+}
+.CartDiv4-1-1button{
+  text-decoration: none;
+  color: black;
+  border: solid 0.5px black;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20%;
+}
+.CartDiv4-1-1button:hover{
+  background-color: rgba(96, 209, 246, 0.753);
+  transition: 1s;
 }

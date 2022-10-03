@@ -1,37 +1,61 @@
-.NavBarAbuelo{
-    background-color: rgb(83, 86, 182);
-    width: 100%;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid 4px black;
-  }
-  .NavBarPadre{
-    width: 80%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-  }
-  .NavBarHijo1{
-    width: 80px;
-    height: 80px;
-    animation: App-logo-spin infinite 20s linear
-  }
-  .NavBarHijo2{
-    color: #282c34;
-    font-size: 30px;
-    width: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-/*   .NavBarHijo2 li a{
-    text-decoration: none;
-    color: #282c34
-  }
-  .NavBarHijo2 li a:hover{
-    color:  #61dafb;
-    transition: 1s;
-  } */
+.NavBarDiv1 {
+  background-color: rgb(83, 86, 182);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 4px black;
+}
+.NavBarDiv1plus{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.NavBarDiv21{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.NavBarDiv211{
+  width: 60px;
+  height: 60px;
+}
+.NavBarDiv221Img{
+  animation: App-logo-spin infinite 20s linear
+}
+.NavBarHijo212Title{
+  font-size: 26px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.NavBarDiv22{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+.NavBarHijo221{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  align-items: center;
+  margin-right: 30px;
+}
+.NavBarHijo2211{
+  margin-right: 20px;
+}
+.NavBarHijo2211Inicio{
+  text-decoration: none;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.NavBarHijo2211Inicio:hover{
+  color: rgba(96, 209, 246, 0.753);
+  transition: 1s;
+}

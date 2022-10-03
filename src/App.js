@@ -19,8 +19,6 @@ function App() {
             <Route path='/' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
             <Route path='/inicio' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
             <Route path='/tienda' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
-            <Route path='/nosotros' element="HOla vendemos compus" />
-            <Route path='/contacto' element="Seguinos en FB" />
             <Route path='/cart' element={ <Cart/> } />
             <Route path='/detail/:Id' element={<ItemDetailContainer />} />
           </Routes>
