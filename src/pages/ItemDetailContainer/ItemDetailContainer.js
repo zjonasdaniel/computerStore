@@ -1,35 +1,29 @@
-import data from "../../components/mockData";
 import { useEffect, useState } from "react";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-    const parametros = useParams();
-    const [Item, setItem] = useState([]);
-    const db = getFirestore();
-    const queryDoc = doc(db, 'Items', 'kT1iYM6rH6jzXLmMxFZN');
-    getDoc(queryDoc).then((res)=> {console.log(res.data())})
-    
+  const {Id}  = useParams();
+  const [Item, setItem] = useState([]);
+  const db = getFirestore();
+  
+  useEffect(() => {
+    getItem();
+  }, [Id]);
 
-    useEffect(() => {
-        getItem.then((response) => {
-            setItem(response);
-        })
-        .catch((error) => console.log(error));
-    }, []);
-
-    const getItem = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data.find((item)=>item.id===parametros.id));
-        },);
+  const getItem = () => {
+    const queryDoc = doc(db, "Items", Id);
+    getDoc(queryDoc).then((res) => {
+      setItem(res.data());
     });
+  };
 
-    return (
-        <div className="ItemListPadre">
-            <ItemDetail Item={Item} />
-        </div>
-    )
-}
+  return (
+    <div className="ItemListPadre">
+      <ItemDetail Item={Item} />
+    </div>
+  );
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

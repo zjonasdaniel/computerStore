@@ -1,0 +1,73 @@
+.CartDiv1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.CartDiv2 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CartDiv3 {
+  height: 60vh;
+  padding: 30px;
+  border: solid 2px black;
+  width: 40%;
+  background-color: rgba(65, 59, 59, 0.541);
+  color: black;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+.CartDiv3_1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.CartDiv3_1Link {
+  text-decoration: none;
+  color: black;
+}
+.CartDiv3_1Button {
+  border: solid 0.5px black;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.CartDiv3_1Button:hover {
+  background-color: rgba(96, 209, 246, 0.753);
+  transition: 1s;
+}
+.CartDiv3_2{
+    border: solid 1px black;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.CartDiv3_2_1{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.CartDiv3_2_1Title{
+    display: flex;
+    justify-content: center;
+}
+.CartDiv3_2_1Title span {
+    font-weight: bold;
+}
+.CartDiv3_2_1Details{
+    display: flex;
+    justify-content: space-evenly;
+}

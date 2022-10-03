@@ -1,0 +1,59 @@
+.ItemDetailDiv1{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ItemDetailDiv2{
+    height: 300px;
+    width: 80%;
+    display: flex;
+    border: solid 1px black;
+    justify-content: space-between;
+    padding: 10px;
+}
+.ItemDetailDiv2Image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: rgba(65, 59, 59, 0.541);
+}
+.ItemDetailDiv2Texto{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 10px;
+}
+.ItemDetailDiv2TextoTitle{
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    background-color: bisque;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+.ItemDetailDiv2TextoDescription{
+    height: 60%;
+    font-size: 28px;
+    text-align: start;
+}
+.ItemDetailDiv2TextoBuy{
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    align-items: center;
+}
+.ItemDetailDiv2TextoBuyButtonCont{
+    height: 100%;
+    width: 30%;
+}
+.ItemDetailDiv2TextoBuyButton{
+    font-size: 18px;
+    border-radius: 10px;
+}
+.ItemDetailDiv2TextoBuyButton:hover{
+    background-color: rgba(96, 209, 246, 0.753);
+    transition: 1s;
+}

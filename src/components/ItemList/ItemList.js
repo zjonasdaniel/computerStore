@@ -1,14 +1,17 @@
 import { Item } from "../Item/Item";
+import'./ItemList.css'
+
 export const ItemList = ({ lista }) => {
   return (
-    <div className="ItemListPadre">
+    <div className="Div1">
       {lista.map((product) => (
         <Item
-          key={product.Id}
-          title={product.Title}
-          price={product.Price}
-          image={product.Image}
-          id={product.Id}
+          Key={product.Id}
+          Title={product.Title}
+          Price={product.Price}
+          Image={product.Image}
+          Id={product.Id}
+          id={product.id}
         />
       ))}
     </div>

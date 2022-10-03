@@ -1,0 +1,71 @@
+.ItemConteiner{
+    border: solid 1px black;
+    height: 310px;
+    width: 280px;
+}
+.ItemHeader{
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ItemHeaderTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+.ItemHeaderTitleA{
+    font-size: 18px;
+    font-weight: bold;
+}
+.ItemHeaderTitleB{
+    font-size: 10px;
+    font-weight: bold;
+    color: rgba(145, 129, 129, 0.884);
+}
+.ItemHeaderPrice{
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+}
+.ItemImage{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 59, 59, 0.541);
+}
+.ItemFooter{
+    height: 30px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.ItemFooterDetailsLink{
+    text-decoration: none;
+    color: black;
+}
+.ItemFooterDetails{
+    border: solid 0.5px black;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.ItemFooterDetails:hover{
+    background-color: rgba(96, 209, 246, 0.753);
+    transition: 1s;
+}
+.ItemFooterBuy{
+    height: 32px;
+    border-radius: 5px;
+    padding: 2px;
+}
+.ItemFooterBuy:hover{
+    background-color: rgba(96, 209, 246, 0.753);
+    transition: 1s;
+}

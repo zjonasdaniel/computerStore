@@ -5,21 +5,21 @@ const CartProvider = ({ children }) => {
     const [cart,setCart] = useState([]);
 
     const addToCart = (item, cantidad) => {
-        if (isInCart(item.id)){
+        if (isInCart(item.Id)){
             alert('ya esta en el carrito');
         }else{
             setCart([...cart,{...item, cantidad}]);
         }
     };
     const isInCart = (id) => {
-        return cart.some((item)=>item.id===id);
+        return cart.some((item)=>item.Id===id);
     };
     const clearCart = () => {
         setCart([]);
     };
 
     const removeItem = (idDelete) => {
-        setCart(cart.filter((item)=>item.id!==idDelete));
+        setCart(cart.filter((item)=>item.Id!==idDelete));
     }
     return (
         <CartContext.Provider value={{cart, addToCart, removeItem}}>

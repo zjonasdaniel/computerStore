@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../../components/ItemList/ItemList";
-import { Link } from 'react-router-dom';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import './ItemListConteiner.css'
 
-const ItemListConteiner = ({ greeting }) => {
+const ItemListConteiner = () => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     getProducts();
@@ -11,22 +11,20 @@ const ItemListConteiner = ({ greeting }) => {
 
   const getProducts = () => {
     const db = getFirestore();
-    const querySnapshot = collection(db, 'Items');
-    getDocs(querySnapshot).then(res => {
-      const data = res.docs.map((doc)=>{
-        return doc.data();
-      })
-      setProductList(data)
+    const querySnapshot = collection(db, "Items");
+    getDocs(querySnapshot).then((res) => {
+      const data = res.docs.map((doc) => {
+        return {id: doc.id, ...doc.data()};
+      });
+      setProductList(data);
     });
   };
-
+  console.log(productList)
   return (
-    <div className="divPadreItemListConteiner">
-      <h1> {greeting} </h1>
-      <Link to="/cart">carrito</Link>
+    <div className="ItemListConteiner"> 
       <ItemList lista={productList} />
     </div>
-  )
-}
+  );
+};
 
-export default ItemListConteiner
+export default ItemListConteiner;
