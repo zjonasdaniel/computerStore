@@ -12,8 +12,8 @@ export const ItemCount = ({ count, setCount, stock }) => {
     }
   };
   return (
-    <div className="itemCountPadre">
-      <div className="itemCountStock"> Stock Disponible: {stock} unidades</div>
+    <div className="itemCountDiv1">
+      <div className="itemCountStock"> Available stock: {stock} units</div>
       <div className="itemCountCount">
         <button onClick={resta}>-</button>
         <div>{count}</div>

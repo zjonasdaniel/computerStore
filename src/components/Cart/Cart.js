@@ -9,7 +9,7 @@ const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
   const sumCart = () => {
     let total = 0;
-    cart.map((item) => (total = total + item.Price * item.cantidad));
+    cart.map((item) => (total = total + item.Price * item.Quantity));
     return total;
   };
   const createOrder = () => {
@@ -28,9 +28,11 @@ const Cart = () => {
     addDoc(query, order)
       .then((res) => {
         console.log(res);
-        alert("Felicitaciones por tu compra!");
+        alert("Thanks for your purchase!");
       })
-      .catch(() => alert("Tu compra no pudo ser completada!"));
+      .catch(() =>
+        alert("Your purchase could not be completed! try again later")
+      );
   };
   const total = sumCart();
   return (
@@ -39,7 +41,7 @@ const Cart = () => {
         <div className="CartDiv3">
           {cart.length === 0 ? (
             <div className="CartDiv3_1">
-              <h2> No hay productos en el carrito! </h2>
+              <h2> There are no products in the cart! </h2>
               <Link to="/" className="CartDiv3_1Link">
                 {" "}
                 <div className="CartDiv3_1Button">HOME </div>
@@ -51,16 +53,16 @@ const Cart = () => {
                 <div className="CartDiv3_2_1">
                   <div className="CartDiv3_2_1Title">
                     {" "}
-                    Producto: <span>{item.Title}</span>
+                    Product: <span>{item.Title}</span>
                   </div>
                   <div className="CartDiv3_2_1Details">
-                    <p>Precio: {item.Price}</p>
-                    <p>Cantidad: {item.cantidad}</p>
+                    <p>Price: {item.Price}</p>
+                    <p>Quantity: {item.Quantity}</p>
                   </div>
                 </div>
                 <div className="CartDiv3_2_2">
                   <button onClick={() => removeItem(item.Id)}>
-                    Eliminar Producto
+                    Delete Product
                   </button>
                 </div>
               </div>
@@ -69,11 +71,11 @@ const Cart = () => {
         </div>
         <div className="CartDiv4">
           <div className="CartDiv4-1">
-            <h1>Carrito</h1>
+            <h1>Cart</h1>
             <h2>TOTAL: ${total}</h2>
             <div className="CartDiv4-1-1">
               <div onClick={createOrder} className="CartDiv4-1-1button">
-                Comprar
+                Buy
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@
 .NavBarDiv221Img{
   animation: App-logo-spin infinite 20s linear
 }
-.NavBarHijo212Title{
+.NavBarSon212Title{
   font-size: 26px;
   font-weight: bold;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -35,7 +35,7 @@
   height: 100%;
   width: 100%;
 }
-.NavBarHijo221{
+.NavBarSon221{
   display: flex;
   justify-content: flex-end;
   height: 100%;
@@ -44,10 +44,10 @@
   align-items: center;
   margin-right: 30px;
 }
-.NavBarHijo2211{
+.NavBarSon2211{
   margin-right: 20px;
 }
-.NavBarHijo2211Inicio{
+.NavBarSon2211Home{
   text-decoration: none;
   color: black;
   font-size: 26px;
@@ -55,7 +55,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
-.NavBarHijo2211Inicio:hover{
+.NavBarSon2211Home:hover{
   color: rgba(96, 209, 246, 0.753);
   transition: 1s;
 }

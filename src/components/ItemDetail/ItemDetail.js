@@ -16,21 +16,21 @@ const ItemDetail = ({ Item }) => {
         <div className="ItemDetailDiv2Image">
           <img width={"300px"} src={Item.Image} alt={Item.Title} />
         </div>
-        <div className="ItemDetailDiv2Texto">
-          <div className="ItemDetailDiv2TextoTitle">
+        <div className="ItemDetailDiv2Text">
+          <div className="ItemDetailDiv2TextTitle">
             <div>{Item.Title}</div>
             <div>${Item.Price}</div>
           </div>
-          <div className="ItemDetailDiv2TextoDescription">
+          <div className="ItemDetailDiv2TextDescription">
             {Item.Description}
           </div>
-          <div className="ItemDetailDiv2TextoBuy">
+          <div className="ItemDetailDiv2TextBuy">
             <div>
               <ItemCount stock={Item.Stock} setCount={setCount} count={count} />
             </div>
-            <div className="ItemDetailDiv2TextoBuyButtonCont">
-              <button className="ItemDetailDiv2TextoBuyButton" onClick={OnAdd}>
-                Agregar al Carrito
+            <div className="ItemDetailDiv2TextBuyButtonCont">
+              <button className="ItemDetailDiv2TextBuyButton" onClick={OnAdd}>
+                Add to cart
               </button>
             </div>
           </div>

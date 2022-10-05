@@ -4,11 +4,11 @@ import { CartContext } from "./CartContext";
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item, cantidad) => {
+  const addToCart = (item, Quantity) => {
     if (isInCart(item.Id)) {
-      alert("ya esta en el carrito");
+      alert("It's already in the cart");
     } else {
-      setCart([...cart, { ...item, cantidad }]);
+      setCart([...cart, { ...item, Quantity }]);
     }
   };
   const isInCart = (id) => {

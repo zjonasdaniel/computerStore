@@ -19,13 +19,13 @@
     width: 30%;
     background-color: rgba(65, 59, 59, 0.541);
 }
-.ItemDetailDiv2Texto{
+.ItemDetailDiv2Text{
     display: flex;
     flex-direction: column;
     width: 65%;
     padding: 10px;
 }
-.ItemDetailDiv2TextoTitle{
+.ItemDetailDiv2TextTitle{
     display: flex;
     justify-content: space-between;
     height: 20%;
@@ -34,26 +34,26 @@
     font-size: 28px;
     font-weight: bold;
 }
-.ItemDetailDiv2TextoDescription{
+.ItemDetailDiv2TextDescription{
     height: 60%;
     font-size: 28px;
     text-align: start;
 }
-.ItemDetailDiv2TextoBuy{
+.ItemDetailDiv2TextBuy{
     display: flex;
     justify-content: space-between;
     height: 20%;
     align-items: center;
 }
-.ItemDetailDiv2TextoBuyButtonCont{
+.ItemDetailDiv2TextBuyButtonCont{
     height: 100%;
     width: 30%;
 }
-.ItemDetailDiv2TextoBuyButton{
+.ItemDetailDiv2TextBuyButton{
     font-size: 18px;
     border-radius: 10px;
 }
-.ItemDetailDiv2TextoBuyButton:hover{
+.ItemDetailDiv2TextBuyButton:hover{
     background-color: rgba(96, 209, 246, 0.753);
     transition: 1s;
 }

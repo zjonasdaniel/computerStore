@@ -1,5 +1,5 @@
 import "./CartWidget.css";
-import carritoCompras from "./carritoCompras.png";
+import CartImg from "./CartImg.png";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <div className="CartWidget">
       <Link to="/cart">
-        <img src={carritoCompras} className="CartWidgetImg" alt="" />
+        <img src={CartImg} className="CartWidgetImg" alt="" />
       </Link>
       {cart.length === 0 ? (
         ""

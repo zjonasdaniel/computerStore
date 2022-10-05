@@ -24,11 +24,11 @@ const ItemDetailContainer = () => {
   return (
     <div className="ItemDetailContainer">
       <div className="ItemDetailContainerDiv1">
-        <Link className="ItemDetailLink" to={"/inicio"}>
-          <div className="ItemDetailContainerDiv1Button">Volver</div>
+        <Link className="ItemDetailLink" to={"/home"}>
+          <div className="ItemDetailContainerDiv1Button">Return</div>
         </Link>
         <Link className="ItemDetailLink" to="/cart">
-          <div className="ItemDetailContainerDiv1Button">Carrito</div>
+          <div className="ItemDetailContainerDiv1Button">Cart</div>
         </Link>
       </div>
       <ItemDetail Item={Item} />
