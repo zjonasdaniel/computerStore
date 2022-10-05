@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import { getFirestore, addDoc, collection } from 'firebase/firestore'
-import moment from 'moment';
+import { getFirestore, addDoc, collection } from "firebase/firestore";
+import moment from "moment";
 
 const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
@@ -16,22 +16,21 @@ const Cart = () => {
     const db = getFirestore();
     const order = {
       buyer: {
-        Name: 'Jonas',
+        Name: "Jonas",
         Phone: 1515151515,
-        Email: 'test@test.com'
+        Email: "test@test.com",
       },
       Items: cart,
       Total: total,
       Date: moment().format(),
-    }
-    const query = collection(db, 'BuyOrder');
+    };
+    const query = collection(db, "BuyOrder");
     addDoc(query, order)
       .then((res) => {
         console.log(res);
-        alert('Felicitaciones por tu compra!');
-
+        alert("Felicitaciones por tu compra!");
       })
-      .catch(() => alert('Tu compra no pudo ser completada!'))
+      .catch(() => alert("Tu compra no pudo ser completada!"));
   };
   const total = sumCart();
   return (
@@ -50,7 +49,10 @@ const Cart = () => {
             cart.map((item) => (
               <div key={item.Id} className="CartDiv3_2">
                 <div className="CartDiv3_2_1">
-                  <div className="CartDiv3_2_1Title"> Producto: <span>{item.Title}</span></div>
+                  <div className="CartDiv3_2_1Title">
+                    {" "}
+                    Producto: <span>{item.Title}</span>
+                  </div>
                   <div className="CartDiv3_2_1Details">
                     <p>Precio: {item.Price}</p>
                     <p>Cantidad: {item.cantidad}</p>

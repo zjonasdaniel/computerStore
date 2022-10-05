@@ -21,13 +21,17 @@ const ItemDetail = ({ Item }) => {
             <div>{Item.Title}</div>
             <div>${Item.Price}</div>
           </div>
-          <div className="ItemDetailDiv2TextoDescription">{Item.Description}</div>
+          <div className="ItemDetailDiv2TextoDescription">
+            {Item.Description}
+          </div>
           <div className="ItemDetailDiv2TextoBuy">
             <div>
               <ItemCount stock={Item.Stock} setCount={setCount} count={count} />
             </div>
             <div className="ItemDetailDiv2TextoBuyButtonCont">
-              <button className="ItemDetailDiv2TextoBuyButton" onClick={OnAdd}>Agregar al Carrito</button>
+              <button className="ItemDetailDiv2TextoBuyButton" onClick={OnAdd}>
+                Agregar al Carrito
+              </button>
             </div>
           </div>
         </div>

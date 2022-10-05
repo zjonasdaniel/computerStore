@@ -16,9 +16,8 @@ function App() {
             <CartWidget />
           </NavBar>
           <Routes>
-            <Route path='/' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
-            <Route path='/inicio' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
-            <Route path='/tienda' element={<ItemListConteiner greeting='Hola, Bienveni@s!' />} />
+            <Route path='/' element={<ItemListConteiner/>} />
+            <Route path='/inicio' element={<ItemListConteiner/>} />
             <Route path='/cart' element={ <Cart/> } />
             <Route path='/detail/:Id' element={<ItemDetailContainer />} />
           </Routes>

@@ -1,7 +1,7 @@
 import "./Item.css";
 import { Link } from "react-router-dom";
 
-export const Item = ({ id,Id, Title, Price, Image }) => {
+export const Item = ({ id, Title, Price, Image }) => {
   return (
     <div className="ItemConteiner">
       <div className="ItemHeader">

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import './ItemDetailContainer.css'
-import { Link } from 'react-router-dom';
+import "./ItemDetailContainer.css";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const { Id } = useParams();
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
   return (
     <div className="ItemDetailContainer">
       <div className="ItemDetailContainerDiv1">
-        <Link className="ItemDetailLink" to={'/inicio'}>
+        <Link className="ItemDetailLink" to={"/inicio"}>
           <div className="ItemDetailContainerDiv1Button">Volver</div>
         </Link>
         <Link className="ItemDetailLink" to="/cart">
