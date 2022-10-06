@@ -9,7 +9,7 @@
 
 This project simulates a virtual store where you can buy computer products, its minimalist design seeks to highlight the features learned in the course.
 
-![ComputerStore](https://user-images.githubusercontent.com/104866296/194423159-7b0e0d98-f0e5-42e7-ab50-65c08a4634f9.gif)
+![ComputerStore (1)](https://user-images.githubusercontent.com/104866296/194431610-b7b96299-642c-4971-81b5-65820d15dc4c.gif)
 
 ## Tools used in development :
 - This project was bootstrapped with **Create-React-App**
