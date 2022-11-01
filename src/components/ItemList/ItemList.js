@@ -6,7 +6,7 @@ export const ItemList = ({ lista }) => {
     <div className="Div1">
       {lista.map((product) => (
         <Item
-          Key={product.Id}
+          key={product.Id}
           Title={product.Title}
           Price={product.Price}
           Image={product.Image}

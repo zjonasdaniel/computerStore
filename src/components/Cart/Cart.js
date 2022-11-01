@@ -7,6 +7,7 @@ import moment from "moment";
 
 const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
+
   const sumCart = () => {
     let total = 0;
     cart.map((item) => (total = total + item.Price * item.Quantity));
@@ -28,7 +29,7 @@ const Cart = () => {
     addDoc(query, order)
       .then((res) => {
         console.log(res);
-        alert("Thanks for your purchase!");
+        alert("Thanks for your purchase! Id of Buy: " + res.id);
       })
       .catch(() =>
         alert("Your purchase could not be completed! try again later")
